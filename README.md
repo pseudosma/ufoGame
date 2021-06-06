@@ -16,7 +16,7 @@ This project demonstrates:
 * Core Graphics vector effects
 * Parallax effects
 * Simple AI
-* Simple game mechanics; sore -keeping and a timer
+* Simple game mechanics; score-keeping and a timer
 
 ## Current status
 
