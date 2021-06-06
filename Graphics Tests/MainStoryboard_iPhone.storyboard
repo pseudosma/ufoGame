@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="Am9-uC-mju">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="chY-g9-oHT">
+            <objects>
+                <viewController id="Am9-uC-mju" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0A1-ug-C3q">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                        </accessibility>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hTR-4l-cKC" appends="YES" id="Ean-mc-L8r"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="9Yk-Np-HwT" kind="modal" identifier="segue1" animates="NO" id="Zbt-HQ-TWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMb-IC-uW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="hTR-4l-cKC">
+                    <connections>
+                        <action selector="segue:" destination="Am9-uC-mju" id="i7A-QN-g39"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="155" y="-6"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="g30-KD-Btl">
+            <objects>
+                <viewController id="9Yk-Np-HwT" customClass="menu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPb-bw-Efu">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v1q-zn-5nw">
+                                <rect key="frame" x="8" y="153" width="57" height="44"/>
+                                <state key="normal" title="walk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="walk:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="pUU-f8-STk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TaV-LQ-ZXa">
+                                <rect key="frame" x="74" y="150" width="49" height="44"/>
+                                <state key="normal" title="run">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="run:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="Utb-Hd-9UR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g79-vk-I3K">
+                                <rect key="frame" x="128" y="153" width="56" height="44"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="F15-jw-3NW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tRK-tc-DFk">
+                                <rect key="frame" x="10" y="262" width="159" height="44"/>
+                                <state key="normal" title="change orientation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeOrientation:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="qau-eF-jfd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q15-ye-seN">
+                                <rect key="frame" x="9" y="209" width="64" height="44"/>
+                                <state key="normal" title="panic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="panic:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="bBN-dX-ErM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oMU-G7-eoD">
+                                <rect key="frame" x="78" y="205" width="93" height="44"/>
+                                <state key="normal" title="panicRun">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="panicRun:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="x17-nb-kSv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YpF-Pu-S9x">
+                                <rect key="frame" x="197" y="151" width="46" height="44"/>
+                                <state key="normal" title="fall">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fall:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="9ZM-BE-TWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JRJ-c9-VDD">
+                                <rect key="frame" x="176" y="208" width="79" height="44"/>
+                                <state key="normal" title="recover">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recover:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="I2V-zm-sG8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i4V-d0-2th">
+                                <rect key="frame" x="178" y="265" width="68" height="44"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="5QB-Cq-spW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4R-NE-b9P">
+                                <rect key="frame" x="250" y="261" width="78" height="44"/>
+                                <state key="normal" title="resume">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="oaV-TA-hOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dOo-uy-zue">
+                                <rect key="frame" x="250" y="150" width="65" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="flair 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair1:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="VzY-n2-Ppq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ceM-dX-ukX">
+                                <rect key="frame" x="333" y="265" width="65" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="flair 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair3:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="SXZ-Zr-3ov"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FEF-Cz-geX">
+                                <rect key="frame" x="326" y="162" width="68" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="attack">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="attack:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="PP5-Ib-TmX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wuB-nF-eBP">
+                                <rect key="frame" x="261" y="205" width="60" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="flair2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair2:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="TnS-qa-xaV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sWV-tR-vsa">
+                                <rect key="frame" x="328" y="215" width="66" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="target">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="target:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="wwX-uJ-dnM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ev2-sZ-WWW">
+                                <rect key="frame" x="401" y="268" width="106" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="call backup">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callBackup:" destination="9Yk-Np-HwT" eventType="touchUpInside" id="c3A-eh-1oI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                        </accessibility>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1Vd-lD-mqK" appends="YES" id="Mho-Ah-Eev"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="zq3-mD-cJ8" kind="modal" identifier="segue2" animates="NO" id="lgY-eQ-IeP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAJ-B1-1Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="1Vd-lD-mqK">
+                    <connections>
+                        <action selector="segue:" destination="9Yk-Np-HwT" id="LBT-Rb-Oyt"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="966" y="0.0"/>
+        </scene>
+        <!--Menu2-->
+        <scene sceneID="IjF-vf-jvB">
+            <objects>
+                <viewController id="zq3-mD-cJ8" customClass="menu2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vVU-SA-h6P">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QJw-hE-nQf">
+                                <rect key="frame" x="20" y="271" width="68" height="44"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="UmQ-Zp-2JU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="em0-y8-5q0">
+                                <rect key="frame" x="106" y="271" width="78" height="44"/>
+                                <state key="normal" title="resume">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="hd2-DF-iua"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dcr-t2-fga">
+                                <rect key="frame" x="201" y="271" width="145" height="44"/>
+                                <state key="normal" title="change direction">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDirection:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="bOk-Eu-0tX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GQW-t4-bWh">
+                                <rect key="frame" x="31" y="118" width="56" height="44"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="htZ-hd-8DI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hVv-RT-mrd">
+                                <rect key="frame" x="95" y="118" width="57" height="44"/>
+                                <state key="normal" title="walk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="walkLeft:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="fAJ-G9-56p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zZb-MJ-VWm">
+                                <rect key="frame" x="161" y="118" width="49" height="44"/>
+                                <state key="normal" title="run">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runLeft:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="4Wa-Mt-Cw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nc2-mX-mrk">
+                                <rect key="frame" x="218" y="118" width="74" height="44"/>
+                                <state key="normal" title="charge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chargeLeft:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="WCs-0B-keG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="20E-Xe-DHf">
+                                <rect key="frame" x="28" y="169" width="64" height="44"/>
+                                <state key="normal" title="panic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="panic:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="Gke-7z-HDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ebm-GC-u9x">
+                                <rect key="frame" x="96" y="169" width="46" height="44"/>
+                                <state key="normal" title="fall">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fall:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="1c1-1F-9Lw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="REO-fQ-93D">
+                                <rect key="frame" x="146" y="169" width="79" height="44"/>
+                                <state key="normal" title="recover">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recover:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="dwU-aB-asO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="odC-2e-B71">
+                                <rect key="frame" x="28" y="220" width="65" height="44"/>
+                                <state key="normal" title="flair 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair1:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="Dhi-cE-hNL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vSd-dc-HnV">
+                                <rect key="frame" x="101" y="220" width="65" height="44"/>
+                                <state key="normal" title="flair 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair2:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="EHg-xQ-OQE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Bo-bG-YWe">
+                                <rect key="frame" x="179" y="220" width="65" height="44"/>
+                                <state key="normal" title="flair 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flair3:" destination="zq3-mD-cJ8" eventType="touchUpInside" id="ZBb-aU-2lc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="v3F-vX-CD1" appends="YES" id="bte-OI-zOb"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="9x2-JV-ZSN" kind="modal" identifier="segue3" animates="NO" id="S1S-Pq-NP9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0D-sJ-iKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="v3F-vX-CD1">
+                    <connections>
+                        <action selector="segue:" destination="zq3-mD-cJ8" id="wUA-tl-HWM"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1736" y="0.0"/>
+        </scene>
+        <!--Menu3-->
+        <scene sceneID="HBf-RR-h4i">
+            <objects>
+                <viewController id="9x2-JV-ZSN" customClass="menu3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQS-sa-4sE">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Y7-J2-P9n">
+                                <rect key="frame" x="9" y="177" width="70" height="44"/>
+                                <state key="normal" title="goLeft">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goLeft:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="fDV-d0-fiY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="THF-oy-AHS">
+                                <rect key="frame" x="79" y="177" width="81" height="44"/>
+                                <state key="normal" title="goRight">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goRight:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="rWi-fw-Q8U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6dU-Yz-Ykn">
+                                <rect key="frame" x="183" y="177" width="82" height="44"/>
+                                <state key="normal" title="leftSlow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftSlow:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="KAe-5M-29R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dkd-Sh-orw">
+                                <rect key="frame" x="266" y="177" width="93" height="44"/>
+                                <state key="normal" title="rightSlow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightSlow:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="Wbb-qP-eQT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rIF-HQ-70g">
+                                <rect key="frame" x="266" y="120" width="126" height="44"/>
+                                <state key="normal" title="takeDammage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeDamage:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="Jhz-pd-PyS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9aA-OE-hCc">
+                                <rect key="frame" x="252" y="11" width="56" height="44"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="DN8-U0-b6C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hMz-Rf-KwO">
+                                <rect key="frame" x="317" y="7" width="74" height="44"/>
+                                <state key="normal" title="abduct">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="abduct:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="Q5s-rQ-Dek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K79-oV-8ZT">
+                                <rect key="frame" x="10" y="225" width="120" height="44"/>
+                                <state key="normal" title="hard left stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hardLeftStop:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="5up-wm-g7m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="InK-02-5ZN">
+                                <rect key="frame" x="131" y="227" width="130" height="44"/>
+                                <state key="normal" title="hard right stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hardRightStop:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="Wf9-8K-cyL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sai-ba-FhQ">
+                                <rect key="frame" x="270" y="229" width="83" height="44"/>
+                                <state key="normal" title="left stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftStop:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="fkK-9N-UA6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b1c-Cv-yTm">
+                                <rect key="frame" x="355" y="229" width="94" height="44"/>
+                                <state key="normal" title="right stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightStop:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="psa-PP-yf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nrY-M3-fCy">
+                                <rect key="frame" x="244" y="65" width="68" height="44"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="kLB-vv-8YC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lDd-oY-vWD">
+                                <rect key="frame" x="314" y="67" width="78" height="44"/>
+                                <state key="normal" title="resume">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume:" destination="9x2-JV-ZSN" eventType="touchUpInside" id="MUx-nb-gSQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FN6-3J-TJ1" appends="YES" id="NcF-Mu-AJ8"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="03F-Ku-E4j" kind="modal" identifier="segue4" animates="NO" id="exT-gh-BIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCI-ma-85h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="FN6-3J-TJ1">
+                    <connections>
+                        <action selector="segue:" destination="9x2-JV-ZSN" id="8di-Si-1kC"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2506" y="0.0"/>
+        </scene>
+        <!--Menu4-->
+        <scene sceneID="Ibc-Eb-9KP">
+            <objects>
+                <viewController id="03F-Ku-E4j" customClass="menu_4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8Q-ey-7DY">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="OFq-TO-15n">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h58-Ml-4QZ">
+                                        <rect key="frame" x="2" y="159" width="48" height="44"/>
+                                        <state key="normal" title="fire">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fire:" destination="03F-Ku-E4j" eventType="touchUpInside" id="oJR-JE-QXC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qp4-v6-vdh">
+                                        <rect key="frame" x="52" y="159" width="95" height="44"/>
+                                        <state key="normal" title="explosion">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="explosion:" destination="03F-Ku-E4j" eventType="touchUpInside" id="sJ7-Fp-2z1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wAN-sz-UFR">
+                                        <rect key="frame" x="149" y="160" width="70" height="44"/>
+                                        <state key="normal" title="debris">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="debris:" destination="03F-Ku-E4j" eventType="touchUpInside" id="5Uf-N5-Wzm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="juL-vs-iPu">
+                                        <rect key="frame" x="4" y="208" width="83" height="44"/>
+                                        <state key="normal" title="gernade">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gernade:" destination="03F-Ku-E4j" eventType="touchUpInside" id="0BC-f5-tZp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gXd-tC-baI">
+                                        <rect key="frame" x="91" y="210" width="74" height="44"/>
+                                        <state key="normal" title="bubble">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bubble:" destination="03F-Ku-E4j" eventType="touchUpInside" id="V6S-eT-Uxf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AVg-KC-9Rb">
+                                        <rect key="frame" x="172" y="209" width="73" height="44"/>
+                                        <state key="normal" title="sparks">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sparks:" destination="03F-Ku-E4j" eventType="touchUpInside" id="mgU-pH-I6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uKP-cP-aqE">
+                                        <rect key="frame" x="23" y="265" width="98" height="44"/>
+                                        <state key="normal" title="start point">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startPoint:" destination="03F-Ku-E4j" eventType="touchUpInside" id="kZa-ny-cn3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zS9-DF-229">
+                                        <rect key="frame" x="134" y="266" width="92" height="44"/>
+                                        <state key="normal" title="end point">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endPoint:" destination="03F-Ku-E4j" eventType="touchUpInside" id="RqQ-ER-ibB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TWG-8K-Nbj">
+                                        <rect key="frame" x="241" y="267" width="145" height="44"/>
+                                        <state key="normal" title="change direction">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeDirection:" destination="03F-Ku-E4j" eventType="touchUpInside" id="g1Y-pX-ce2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TNu-U8-6xJ">
+                                        <rect key="frame" x="225" y="160" width="72" height="44"/>
+                                        <state key="normal" title="smoke">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="smoke:" destination="03F-Ku-E4j" eventType="touchUpInside" id="d63-Lg-Iwb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="prZ-qX-sAe">
+                                        <rect key="frame" x="254" y="214" width="65" height="44"/>
+                                        <state key="normal" title="anger">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pissed:" destination="03F-Ku-E4j" eventType="touchUpInside" id="jn5-ya-TjV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BLL-Rw-ca6">
+                                        <rect key="frame" x="301" y="111" width="56" height="44"/>
+                                        <state key="normal" title="alert">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="alerted:" destination="03F-Ku-E4j" eventType="touchUpInside" id="tLb-8i-PGs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dBw-6f-c81">
+                                        <rect key="frame" x="280" y="64" width="75" height="44"/>
+                                        <state key="normal" title="missile">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="missile:" destination="03F-Ku-E4j" eventType="touchUpInside" id="0W5-Es-STG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BIh-l7-lh3">
+                                        <rect key="frame" x="283" y="14" width="64" height="44"/>
+                                        <state key="normal" title="bullet">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bullet:" destination="03F-Ku-E4j" eventType="touchUpInside" id="bw7-6h-T5Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nxY-WS-CYR">
+                                        <rect key="frame" x="307" y="166" width="68" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="music">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="music:" destination="03F-Ku-E4j" eventType="touchUpInside" id="Hsy-iJ-crp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gwi-ip-EJB">
+                                        <rect key="frame" x="325" y="214" width="68" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="signal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signal:" destination="03F-Ku-E4j" eventType="touchUpInside" id="LGM-D2-uGu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vMP-35-AEa" appends="YES" id="C67-HI-0Uh"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="subView" destination="OFq-TO-15n" id="DAi-ke-09W"/>
+                        <segue destination="F90-WW-V0Z" kind="modal" identifier="segue5" animates="NO" id="7rl-Q4-igH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vd1-nY-VLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="vMP-35-AEa">
+                    <connections>
+                        <action selector="segue:" destination="03F-Ku-E4j" id="gGp-Gr-SYk"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3352" y="0.0"/>
+        </scene>
+        <!--Menu5-->
+        <scene sceneID="XX5-uJ-MyN">
+            <objects>
+                <viewController id="F90-WW-V0Z" customClass="menu5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AXf-JR-Xy4">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxR-Ug-29V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054" y="5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
